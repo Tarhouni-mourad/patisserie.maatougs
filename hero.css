@@ -1,0 +1,135 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+header{
+  z-index: 501;
+}
+
+/* hero.css */
+/* hero.css */
+/* hero.css */
+/* hero.css */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes color-change {
+  0%, 100% {
+    background-color: green; /* Start and end with green */
+  }
+  50% {
+    background-color: red; /* Transition to red */
+  }
+}
+#btn {
+  width: 180px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: green; /* Green background */
+  color: white; /* White text */
+  padding: 15px 22px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline-block */
+  transition-duration: 0.4s; /* Transition */
+  cursor: pointer; /* Cursor pointer */
+  animation: heartbeat 1.5s infinite;
+  animation: color-change 1.5s infinite; /* Apply heartbeat animation */
+}
+a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.box
+{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: animate 35s linear infinite;
+}
+@keyframes animate
+{
+  0%
+  {
+   transform: perspective(1000px) rotateY(0deg);
+}
+   100%
+{
+   transform: perspective(1000px) rotateY(360deg);
+   }
+}
+.box span
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004) ;
+}
+.box span img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 254, 255);
+  object-fit: cover;
+}
+h2
+{
+  color: #ffffff;
+  font-size: 47px;
+}
+/* Define the keyframes for the color change */
+@keyframes colorChange {
+  0% {
+      color: red;
+  }
+  50% {
+      color: yellow;
+  }
+  100% {
+      color: yellow;
+  }
+}
+
+/* Apply the animation to your h2 element */
+h2 {
+  animation: colorChange 1s infinite; /* Change duration as desired */
+}

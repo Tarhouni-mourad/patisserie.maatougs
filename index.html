@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image rolling</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+  <link rel="stylesheet" href="hero.css">
+</head>
+<body>
+  <header>
+    <button id="btn"><a href="frontpage.html">تفضل بالدخول</a></button>
+  </header>
+  <div class="container">
+      <div class="box">
+        <span style="--i:1;"><img src="img/16.jpg"></span>
+        <span style="--i:2;"><h2>حلويات معتوق</h2></span>
+        <span style="--i:3;"><img src="img/18.jpg"></span>
+        <span style="--i:4;"><h2>حلويات معتوق</h2></span>
+        <span style="--i:5;"><img src="img/5.jpg"></span>
+        <span style="--i:6;"><h2>حلويات معتوق</h2></span>
+        <span style="--i:7;"><img src="img/6.jpg"></span>
+        <span style="--i:8;"><h2>حلويات معتوق</h2></span>
+      </div>
+</div>
+
+<script>
+
+  
+
+
+// Play the heartbeat sound when the button animation starts
+document.getElementById("btn").addEventListener("animationiteration", function() {
+  // Wait for the audio to be ready to play
+  heartbeatAudio.addEventListener("canplaythrough", function() {
+    heartbeatAudio.play();
+  }, { once: true }); // Use { once: true } to ensure the event listener is called only once
+});
+
+
+</script>
+</body>
+</html>

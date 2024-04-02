@@ -1,0 +1,248 @@
+@import url("http://www.fontstatic.com/f=jazeera,jazeera-light");
+*{
+  font-family: 'jazeera-light';
+    margin:0;
+  /*to disable the scrollbar 
+  both the side and bottom
+
+  overflow: hidden;
+
+  overflow-y: hidden;
+
+  overflow-x: hidden;
+*/ 
+}
+
+ *{
+ 	box-sizing: border-box;
+ 	margin: 0;
+ }
+ body , nav
+ {
+  background: linear-gradient(90.5deg, rgb(247, 204, 0) 0.2%, rgb(247, 0, 0) 27.3%, rgb(161, 0, 156) 85.5%); }
+ 
+ body
+ {
+  background: linear-gradient(90.5deg, rgb(247, 204, 0) 0.2%, rgb(247, 0, 0) 27.3%, rgb(161, 0, 156) 85.5%); }
+ .nav
+ {
+  margin: 0;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 5px 30px rgba(90, 86, 86, 0.3);
+  position: fixed;
+  z-index: 101;
+ }
+ .navbar ul
+ {
+  display: flex;
+  margin-right: 50px;
+  margin-top:  21px;
+  gap: 50px;
+  list-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
+ }
+ #logo {
+  height: 40px;
+  margin: 0px;
+ }
+ ul a{
+  text-decoration: none;
+  color: rgb(255, 255, 255); 
+  flex: 1;
+}
+ iframe{
+  margin-left: 30px;
+ }
+img{
+  border-radius: 15px;
+}
+ .container{
+ 	max-width: 1400px;
+ 	margin: auto;
+  text-align: center;
+ }
+ .row{
+ 	display: flex;
+  justify-content: center;
+ 	flex-wrap: wrap;
+   flex: 1;
+
+ }
+
+ .services{
+ 	min-height: 100vh;
+ 	padding:80px 0;
+ }
+
+.services .service-items{
+	max-width: 100%;
+}
+.services .service-items .item{
+	max-width: 16%;
+	padding: 5px;
+}
+
+.services .service-items .item-inner{
+  display: grid;
+	border:1px solid #ffffff;
+  border-radius: 15px;
+	padding: 10px;
+}
+.services .service-items .read-more-cont{
+	display: none;
+}
+.services .service-items .item-inner h3{
+	font-size: 20px;
+	color:#ffffff;
+	margin-bottom: 30px;
+	position: relative;
+}
+.services .service-items .item-inner h3::before{
+  content: '';
+  height: 1px;
+  width: 110px;
+  background-color: #ffffff;
+  position: absolute;
+  left:0;
+  transform: translateX(30%);
+  bottom:-10px;
+}
+
+.services .service-items .item-inner p{
+	color:#03a01d;
+	font-size: 16px;
+	margin:0 0 30px;
+}
+.services .service-items .item-inner .btn{
+  margin-left: 50px;
+  width: 80px;
+  height: 35px;
+	font-size: 18px;
+	background-color: transparent;
+	border:1px solid #ffffff;
+	color:rgb(255, 255, 255);
+  background-color: rgb(12, 145, 0);
+  border-radius: 5px;
+	padding: 1px 3px;
+	cursor: pointer;
+}
+
+.popup-box{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top:0;
+  background-color: white;
+  z-index: 500;
+	visibility: hidden;
+	opacity:0;
+	transition: all 0.5s ease-in-out;
+}
+.popup-box.open{
+  visibility: visible;
+	opacity:1;	
+}
+.popup-box .popup-content{
+  box-shadow: 0 5px 30px rgba(0, 0, 0,.30);
+  background: linear-gradient(68.8deg, rgb(174, 33, 255) 15.4%, rgb(255, 33, 33) 111.3%);  text-align: center;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(75, 157, 189);
+	max-width: 1400px;
+  max-height: 700px;
+	position: absolute;
+	left: 30%;
+	top:50%;
+	transform: translate(-30%,-50%);
+}
+
+.popup-box .popup-header{
+	padding: 15px 40px 15px 15px;
+	border-bottom: 1px solid #ffffff;
+  text-align: center;
+}
+.popup-box .popup-header h3{
+	margin:0;
+	color:#ff0000;
+	font-size: 20px;
+}
+.popup-box .popup-header .popup-close-icon{
+	position: absolute;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #ff0000;
+    font-size: 28px;
+    line-height: 30px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.popup-box .popup-body{
+	padding: 15px;
+	max-height: 400px;
+	overflow-y: auto;
+}
+.popup-box .popup-body img{
+	max-width: 320px;
+	display: block;
+  float: right;
+	margin-top: 15px;
+}
+.popup-box .popup-body p{
+	font-size: 16px;
+	color:#000000;
+	margin:0 0 15px;
+}
+.popup-box .popup-footer{
+	padding: 15px;
+	border-top:1px solid #ffffff;
+	text-align: center;
+}
+.popup-box .popup-footer .btn{
+	padding: 8px 15px;
+	border:1px solid #ffffff;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	background-color: red;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.popup-box .popup-footer .btn:focus
+{
+	outline: none;
+}
+img#front
+{
+  width: 100%;
+}
+/*responsive*/
+
+@media(max-width: 767px)
+{
+	.services .service-items .item{
+	  flex:0 0 100%;
+      max-width: 100%;
+   }
+   .popup-box .popup-content
+   {
+   	 width: calc(100% - 30px);
+   }
+}
+
+@media only screen and (max-width: 768px) 
+{
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+}
